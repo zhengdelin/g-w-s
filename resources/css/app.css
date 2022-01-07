@@ -1,0 +1,621 @@
+@import "bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans:wght@300&display=swap");
+
+*:hover {
+    cursor: url("/pictures/鼠標.png"), auto;
+}
+
+body {
+    cursor: url("/pictures/鼠標.png"), auto;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p, a, input, label, textarea, span, ul, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+.text-left {
+    text-align: left;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.star {
+    color: rgb(255, 215, 0);
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.h-80 {
+    height: 80%;
+}
+
+.mt-20 {
+    margin-top: 5rem;
+}
+
+.color_history {
+    color: rgb(146, 146, 146);
+}
+
+.color_fourstar {
+    color: purple;
+    font-weight: bold;
+}
+
+.color_fivestar {
+    color: rgb(192, 113, 61);
+    font-weight: bold;
+}
+
+.color_point {
+    color: #CA472D;
+    font-weight: bold;
+}
+.color_list{
+    color: #a38052;
+}
+.color_orange{
+    color:#ED964B;
+    font-weight: bold;
+}
+.color_wind {
+    color: #359697;
+    font-weight: bold;
+}
+
+.color_ice {
+    color: #25c0f5;
+    font-weight: bold;
+}
+
+.color_water {
+    color: #47CCF8;
+    font-weight: bold;
+}
+
+.color_fire {
+    color: #ec4923;
+    font-weight: bold;
+}
+
+.color_thunder {
+    color: #9763c4;
+    font-weight: bold;
+}
+
+.color_rock {
+    color: #E0C688;
+    font-weight: bold;
+}
+.color_optional{
+    color: #4682b4;
+}
+
+/* --------------------------------------------------------------------- */
+
+#preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+#wish_interface {
+    background-image: url("/pictures/wish_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.wish_interface_container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.closebtn {
+    background-image: url('/pictures/定軌close.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+.closebtn:hover {
+    transform: scale(1.1);
+}
+.settings_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(50, 50, 50, 0.7);
+    z-index: 2;
+}
+
+.settings_container .focus-img-container img {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 12vw;
+}
+
+.settings_container .focus-img-container {
+    width: 10vw;
+    margin-top: 35%;
+}
+
+.settings_container .focus-img-container img:hover {
+    transform: scale(1.1);
+}
+
+.settings_container .focus-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(73, 83, 98);
+    margin-top: 15%;
+}
+
+.settings_container .focus-text .focus-item {
+    color: rgb(242, 148, 11);
+}
+
+.settings_container .confirmbtn {
+    background-image: url('/pictures/定軌button.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 10%;
+    margin-top: 15%;
+}
+
+.settings_container .cancelbtn {
+    background-image: url('/pictures/取消定軌button.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 10%;
+    opacity: 0.6;
+    margin-top: 15%;
+}
+
+.settings_container .confirmbtn:hover {
+    transform: scale(1.1);
+}
+
+.settings_container .cancelbtn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.setting {
+    background-color: #ebebeb;
+    position: relative;
+}
+.optional_pool_container{
+    background-color: #ebebeb;
+    position: absolute;
+}
+
+.optional_pool_table,.optional_pool_table >*>div{
+    border: 1px solid #bdbdbd;
+}
+.list_option{
+    display: inline-block;
+    padding:6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px #ccc solid;
+    border-radius: 4px;
+}
+.list_option:hover{
+    background-color: #E6E6E6;
+    border: 1px black dotted;
+}
+.list_option.opt_selected{
+    background-color: #d679e9;
+    border-color: #adadad;
+}
+.list_option.opt_selected:hover{
+    
+    background-color: #e0a0ec;
+    border-color: #adadad;
+}
+/* ------------------------------------------------- */
+#first h1 {
+    text-align: center;
+    color: #d4bc8f;
+    font-size: 3rem;
+    margin-top: 3vh;
+    font-weight: 700;
+    text-shadow: 3px 2px 2px rgb(50 50 50);
+}
+
+#first ul li {
+    margin: 0 20px;
+    transition-duration: 500ms;
+}
+
+#first ul li .sd {
+    margin-bottom: 3%;
+}
+
+#center {
+    margin: 1rem 8rem;
+    position: relative;
+}
+
+#center .container {
+    padding: 0;
+    position: relative;
+}
+
+#center .totalwish {
+    font-size: 1.4rem;
+    padding: 0.3rem 0.7rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: gold;
+    border-radius: 7px;
+}
+
+#center img {
+    transition: 0.5s linear;
+    min-width: 100%;
+}
+
+#center .guaranteed {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color: darkgoldenrod;
+    font-weight: bolder;
+}
+
+#center .focus {
+    background-image: url('/pictures/定軌icon.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12vw;
+    height: 20vh;
+    position: absolute;
+    left: -13vw;
+    bottom: 10px;
+}
+
+#center .focus:hover {
+    background-image: url('/pictures/定軌iconHover.png');
+    transform: scale(1.1);
+}
+.btn_ac {
+    font-weight: 1000;
+    background-color: rgb(221, 221, 221);
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 3px;
+    width: 6rem;
+    margin: auto 10px;
+    
+}
+
+.btn_ac:hover {
+    cursor: url("/pictures/鼠標.png"), auto;
+    background-color: rgb(230, 227, 227);
+}
+.option_pool_btn{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.3rem 0.7rem;
+    position: absolute;
+    top: 7px;
+    left:7px;
+    background-color: gold;
+    border-radius: 7px;
+    border:gold 3px solid;
+}
+.option_pool_btn:hover{
+    border:white 3px solid;
+}
+
+#last .wish {
+    width: 30vw;
+    height: 10vh;
+}
+
+#last .wish .wish_button {
+    background-image: url("http://127.0.0.1:8000/pictures/wish_button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #d4bc8f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#last .wish .wish_button:hover {
+    color: gold;
+}
+
+/* ------------------------------------------------------------------- */
+
+#wish_scene {
+    overflow: hidden;
+    height: 100vh;
+    transition: all 1s linear;
+    animation-delay: 1s;
+}
+
+#wish_scene .skip_button {
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 5px 25px;
+    background-color: rgb(221, 221, 221);
+    color: black;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    opacity: 0.4;
+    transition: opacity 500ms;
+}
+
+#wish_scene .skip_button:hover {
+    opacity: 0.8;
+}
+
+#wish_scene .wish_video {
+    max-width: 1080px;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+/* ------------------------------------------------------- */
+
+#wish_result {
+    background-image: url("/pictures/wish_result_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#wish_result .wish_result_container {
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#wish_result .wish_result_container.ten {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#wish_result .wish_result_container>div:first-child {
+    min-height: 10vh;
+}
+
+#wish_result .wish_result_container>div:nth-child(2) {
+    min-height: 85vh;
+    padding: 1vh 0;
+}
+
+#wish_result .close_button {
+    background-image: url("/pictures/close_button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+#wish_result .close_button:hover {
+    transform: scale(1.1);
+}
+
+#wish_result .wish_item_container {
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 5px;
+    position: relative;
+}
+
+#wish_result .new-badge {
+    width: fit-content;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    color: white;
+    font-size: 0.8rem;
+    padding: 1px 2px;
+    opacity: 0.9;
+    background-color: darkgoldenrod;
+    border-radius: 6px;
+}
+
+
+
+#wish_result .wish_single_img {
+    flex: 0 0 75%;
+    width: 75%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#wish_result .wish_ten_img {
+    position: relative;
+    flex: 0 0 8.333333%;
+    width: 8.333333%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(50, 50, 50, 0.9);
+    border-radius: 15px;
+    margin: 0 0.25rem;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    height: 40vh;
+    text-shadow: 3px 2px 2px rgb(29 29 29);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#inventory {
+    background-color: rgb(235, 235, 235);
+    min-height: 100vh;
+}
+
+#inventory table ,#detail table{
+    border: rgb(196, 194, 191)
+}
+#inventory table * ,#detail table * {
+    border-width: 2px;
+}
+
+.history_control_btn {
+    background-color: rgb(190, 164, 127);
+    color: white;
+    border-width: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.history_control_btn:hover {
+    cursor: url("/pictures/鼠標.png"), auto;
+    color: black;
+}
+
+.hisroty_page_control {
+    background-color: rgb(145, 138, 134);
+    color: white;
+    border-width: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#detail {
+    background-color: rgb(235, 235, 235);
+    min-height: 100vh;
+}
+
+.detail_title {
+    background-color: rgb(219, 219, 219);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.detail_subtitle {
+    background-color: #9B794E;
+    color: white;
+
+}
+
+.detail_five {
+    background-color: rgb(220, 187, 165);
+}
+
+.detail_box {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+}
+
+.detail_four {
+    background-color: rgb(182, 171, 191);
+}
+.detail_three{
+    background-color:#A5BACC;
+}
+.detail_text {
+    font-size: 1.1rem;
+}
+#detail .closebtn{
+    position:fixed;
+}
+
+/* ------------------------------------------------------------ */
+
+@media (min-width: 1200px) {
+    .mx-80 {
+        max-width: 80vw;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #wish_interface #center .guaranteed {
+        bottom: 11%;
+        left: 7%;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+    #center {
+        margin: 2rem 2rem;
+    }
+
+    #last .wish {
+        width: 40vw;
+    }
+
+    #wish_result .wish_single_img {
+        flex: 0 0 75%;
+        width: 75%;
+        height: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+}

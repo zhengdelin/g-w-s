@@ -1,0 +1,16 @@
+1.安裝nodejs  LTS版
+2.到專案目錄下打開windows powershell
+3.輸入npm install
+4.輸入npm install bootstrap@latest bootstrap-icons @popperjs/core --save-dev
+5.在resources/css/app.css輸入@import "~bootstrap";
+6.輸入npm install vue@next --save-dev
+7.輸入npm install --save-dev vue-loader@next
+8.在webpack.mix.js更改為mix.js('resources/js/app.js', 'public/js').vue()
+    .postCss('resources/css/app.css', 'public/css', [
+    ]);
+9.輸入npm run dev
+
+參考網址
+https://nodejs.org/en/
+https://www.kreaweb.be/laravel-8-bootstrap-5/
+https://dev.to/rjzauner/getting-started-with-laravel-8-vue-3-and-tailwind-5gm9
