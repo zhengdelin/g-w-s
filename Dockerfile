@@ -1,10 +1,11 @@
-FROM alpine:3.14
+FROM node:latest
+
 RUN npm install
 RUN npm install bootstrap@latest bootstrap-icons @popperjs/core --save-dev
 RUN npm install vue@next --save-dev
 RUN npm install --save-dev vue-loader@next
 
-CMD [ "node" ]
+CMD [ "node","start" ]
 
 
 FROM php:7.4-fpm-alpine
