@@ -592,7 +592,11 @@ select {
         max-width: 80vw;
     }
 }
-
+@media (min-width:1440px){
+    #center .container {
+        min-width: 1280px;
+    }
+}
 @media all and (max-width: 1024px) {
     #wish_interface #center .guaranteed {
         bottom: 11%;
