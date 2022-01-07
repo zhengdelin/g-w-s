@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css',true) }}" rel="stylesheet">
 
     <script>
         var thum_img = JSON.parse("{{ json_encode($thum_img) }}".replace(/&quot;/g, '"')); //縮圖
@@ -44,9 +44,6 @@
         {{-- {{ dd($pool_info,$pool_detail,$optional_pool, $pool_all, $main_img, $thum_img, $synk_info, $wp_up_info, session()) }} --}}
         <div id='wish_interface' v-if="view=='index'" class='d-flex align-items-center'>
             {{-- 定軌 --}}
-            <div class=" position-fixed top-0 start-0">
-                <a href="/genshin/data/index">管理</a>
-            </div>
             <div class="settings_container d-flex justify-content-center align-items-center" v-if="set_focus||setting">
                 <div class="w-60 row position-relative" v-if="set_focus">
                     <img class="p-0" src="/pictures/定軌圖2.png" alt="">
@@ -1103,7 +1100,7 @@
     </div>
 
 
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js',true) }}"></script>
 </body>
 
 </html>
