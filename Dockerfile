@@ -1,5 +1,7 @@
 FROM node:latest
-
+RUN mkdir -p /app
+COPY package.json ./app
+RUN cd ./app
 RUN npm install
 RUN npm install bootstrap@latest bootstrap-icons @popperjs/core --save-dev
 RUN npm install vue@next --save-dev
@@ -17,7 +19,6 @@ RUN mkdir -p /run/nginx
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
-RUN mkdir -p /app
 COPY . /app
 
 RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar && mv composer.phar /usr/local/bin/composer"
