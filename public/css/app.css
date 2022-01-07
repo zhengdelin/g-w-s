@@ -11649,7 +11649,7 @@ select {
 }
 
 #last .wish .wish_button {
-    background-image: url("http://127.0.0.1:8000/pictures/wish_button.png");
+    background-image: url("/pictures/wish_button.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
