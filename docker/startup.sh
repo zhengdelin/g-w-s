@@ -8,11 +8,11 @@ gcloud sql instances describe g-w-s
 
 sudo mkdir /cloudsql; sudo chmod 777 /cloudsql
 
-./cloud_sql_proxy -dir=/cloudsql -instances=g-w-s-336517:asia-east1:g-w-s &
+./cloud_sql_proxy -dir=/cloudsql -instances=g-w-s-337502:asia-east1:g-w-s &
 
 ./cloud_sql_proxy -dir=/cloudsql &
 
-mysql -u g-w-s -p -S /cloudsql/g-w-s-336517:asia-east1:g-w-s
+mysql -u g-w-s -p -S /cloudsql/g-w-s-337502:asia-east1:g-w-s
 echo ''
 mysql use genshin
 
