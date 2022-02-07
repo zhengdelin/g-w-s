@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="{{ asset('css/app.css',true) }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <script>
         var thum_img = JSON.parse("{{ json_encode($thum_img) }}".replace(/&quot;/g, '"')); //縮圖
@@ -1100,7 +1100,7 @@
     </div>
 
 
-    <script type="text/javascript" src="{{ asset('js/app.js',true) }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>
